@@ -13,6 +13,14 @@ $grayDarker: #aaa;
   box-sizing: border-box;
 }
 
+@mixin rounded-corners($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+ 
+
+
 /* universal */
 
 html {
@@ -119,6 +127,7 @@ footer {
 	width: 100%;
 	margin-top: 45px;
 	@include box_sizing;
+	@include rounded-corners(10px);
 }
 
 /* sidebar */
@@ -158,6 +167,7 @@ input, textarea, select, .uneditable-input {
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
+  @include rounded-corners(5px);
 }
 
 input {
@@ -175,6 +185,6 @@ input {
 
 
 .field_with_errors {
-	@extend .control-group;
-	@extend .error;
+	@extend .control-group !optional;
+	@extend .error !optional;
 }

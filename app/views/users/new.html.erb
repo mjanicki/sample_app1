@@ -1,11 +1,11 @@
 <% provide(:title, 'Sign up') %>
 <h1>Sign up</h1>
 
-<div class="row">
-	<div class="span6 offset3">
+<div class="navbar-form">
+	<div class="input-group">
 		<%= form_for(@user) do |f| %>
 			<%= render 'shared/error_messages' %>
-
+			<!-- <input type="text" class="form-control" placeholder="Name"> -->
 			<%= f.label :name %>
 			<%= f.text_field :name %>
 
@@ -17,8 +17,10 @@
 
 			<%= f.label :password_confirmation, "Confirmation" %>
 			<%= f.password_field :password_confirmation %>
-
-			<%= f.submit "Create my account", class: "btn btn-large btn-primary" %>			
+		<div classs="btn-group">
+			<%= f.submit "Create my account", class: "btn btn-primary" %>
+		</div>
+						
 		<% end %>	 
 	</div>
 </div>
