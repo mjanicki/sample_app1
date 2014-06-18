@@ -7,10 +7,10 @@ $grayLight: #999;
 $grayLighter: #888;
 $grayDarker: #aaa;
 
-@mixin box_sizing { 
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* universal */
@@ -121,7 +121,7 @@ footer {
 	@include box_sizing;
 }
 
-/* sidebard */
+/* sidebar */
 
 aside {
 	section {
@@ -154,14 +154,14 @@ aside {
 /* forms */
 
 input, textarea, select, .uneditable-input {
-	border: 1px solid #bbb;
-	width: 100%;
-	margin-bottom: 15px;
-	@include box_sizing;
+  border: 2px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
 }
 
 input {
-	height: auto !important;
+  height: auto !important;
 }
 
 
